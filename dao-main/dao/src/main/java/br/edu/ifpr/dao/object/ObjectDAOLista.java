@@ -1,10 +1,9 @@
 package br.edu.ifpr.dao.object;
 
+import br.edu.ifpr.dao.Produto;
 import java.util.List;
 
-import br.edu.ifpr.dao.Produto;
-
-public class ObjectDAOLista implements ObjectDAO{
+public class ObjectDAOLista implements ObjectDAO {
     private List<Object> objects;
 
     public ObjectDAOLista() {
@@ -24,9 +23,9 @@ public class ObjectDAOLista implements ObjectDAO{
     @Override
     public Object buscarPorId(int id) {
         for (Object o : objects) {
-            if (o instanceof Produto){
-                Produto p = (Produto)o;
-                if(p.getId() == id){
+            if (o instanceof Produto) {
+                Produto p = (Produto) o;
+                if (p.getId() == id) {
                     return p;
                 }
             }
@@ -36,13 +35,20 @@ public class ObjectDAOLista implements ObjectDAO{
 
     @Override
     public void remover(int id) {
-        objects.removeIf(o -> {
+        Object objetoRemover = null;
+
+        for (Object o : objects) {
             if (o instanceof Produto) {
                 Produto p = (Produto) o;
-                return p.getId() == id;
+                if (p.getId() == id) {
+                    objetoRemover = o;
+                    break;
+                }
             }
-            return false;
-        });
-    }
+        }
 
+        if (objetoRemover != null) {
+            objects.remove(objetoRemover);
+        }
+    }
 }
