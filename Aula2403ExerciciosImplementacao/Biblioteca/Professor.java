@@ -1,4 +1,4 @@
-package Aula2403ExerciciosImplementacao;
+package Aula2403ExerciciosImplementacao.Biblioteca;
 
 public class Professor extends Pessoa{
     String departamento;
@@ -8,13 +8,15 @@ public class Professor extends Pessoa{
         this.departamento = departamento;
     }
 
-    public String getDepartamento(){
-        
+    public Professor(){}
+
+    public String getDepartamento() {
+        return departamento;
     }
 
     public void setDepartamento(String departamento) {
         this.departamento = departamento;
     }
-    
+
     
 }
