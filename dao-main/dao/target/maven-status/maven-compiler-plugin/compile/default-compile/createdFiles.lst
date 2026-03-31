@@ -1,0 +1,12 @@
+br/edu/ifpr/dao/Main.class
+br/edu/ifpr/dao/generics/GenericDAO.class
+br/edu/ifpr/dao/object/ObjectDAO.class
+br/edu/ifpr/dao/Produto.class
+br/edu/ifpr/dao/Cliente.class
+br/edu/ifpr/dao/object/Main.class
+br/edu/ifpr/dao/ProdutoDAOLista.class
+br/edu/ifpr/dao/ProdutoDAOJDBC.class
+br/edu/ifpr/dao/object/ObjectDAOLista.class
+br/edu/ifpr/dao/generics/Main.class
+br/edu/ifpr/dao/generics/DAOLista.class
+br/edu/ifpr/dao/ProdutoDAO.class
